@@ -1,127 +1,165 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import pfp from "../assets/pfp.jpg";
+import article from "../assets/article.jpg";
+import linkedin from "../assets/linkedin.png";
+import tiktok from "../assets/tiktok.jpg";
+import github from "../assets/github.png";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <Card>
-          <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
-            <CardAction>Card Action</CardAction>
-          </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
-        </Card>
-        <Button>Test</Button>
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <section className="mt-10 flex flex-col items-center">
+      {/* 🌟 Intro Section with Profile Picture */}
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+        {/* Profile Picture */}
+        <div className="flex flex-col items-center space-y-6">
+          {/* Profile Picture */}
+          <div className="relative w-[180px] h-[180px] rounded-full overflow-hidden">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={pfp}
+              alt="Gira Chawda"
+              fill
+              className="object-cover object-center"
             />
-            Deploy now
-          </a>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-5">
+            <a
+              href="https://github.com/girachawda"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition"
+            >
+              <Image src={github} alt="GitHub" width={28} height={28} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/girachawda/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition"
+            >
+              <Image src={linkedin} alt="LinkedIn" width={28} height={28} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@giraintech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition"
+            >
+              <Image src={tiktok} alt="TikTok" width={28} height={28} />
+            </a>
+          </div>
+        </div>
+
+        {/* Text + Buttons */}
+        <div className="text-center sm:text-left space-y-6">
+          <h1 className="text-5xl font-bold">Hi, I’m Gira Chawda 👋</h1>
+
+          <p className="text-lg text-muted-foreground max-w-2xl">
+            Software Engineering Intern @ Shopify & Digital Technologies Student
+            @ York University. I love building scalable products, sharing
+            knowledge, and empowering innovation through technology.
+          </p>
+
+          <div className="flex justify-center sm:justify-start gap-4 mt-10">
+            <a
+              href="/about"
+              className="px-5 py-2 bg-primary text-primary-foreground rounded-md hover:bg-accent transition"
+            >
+              Learn More
+            </a>
+            <a
+              href="/insights"
+              className="px-5 py-2 border border-border rounded-md hover:bg-muted transition"
+            >
+              See My Insights
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* 🌟 Featured Section */}
+      <div className="mt-20 text-center">
+        <h2 className="text-2xl font-semibold mb-6">Highlights ✨</h2>
+
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.yorku.ca/yfile/2025/03/28/award-winning-teen-trailblazer-talks-tech-transformative-learning/"
             target="_blank"
             rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
           >
-            Read our docs
+            <div className="w-full h-64 relative">
+              <Image
+                src={article}
+                alt="Gira Chawda featured in York University YFile article"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "50% 20%" }}
+              />
+            </div>
+            <div className="bg-background p-4 text-left">
+              <h3 className="text-lg font-semibold">
+                Award-winning teen trailblazer talks tech, transformative
+                learning
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                YFile · York University
+              </p>
+            </div>
+          </a>
+
+          {/* 2️⃣ Shopify Feature */}
+          <a
+            href="https://www.shopify.com/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
+          >
+            <div className="w-full h-64 relative">
+              <Image
+                src="/shopify-feature.jpg"
+                alt="Gira Chawda mentioned in Shopify Blog"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "50% 20%" }}
+              />
+            </div>
+            <div className="bg-background p-4 text-left">
+              <h3 className="text-lg font-semibold">
+                Building for scale: My journey as a Shopify intern
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">Shopify Blog</p>
+            </div>
+          </a>
+
+          {/* 3️⃣ Speaking Feature */}
+          <a
+            href="https://example.com/talk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
+          >
+            <div className="w-full h-64 relative">
+              <Image
+                src="/speaking-feature.jpg"
+                alt="Gira Chawda speaking at a tech event"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "50% 20%" }}
+              />
+            </div>
+            <div className="bg-background p-4 text-left">
+              <h3 className="text-lg font-semibold">
+                Inspiring innovation: My talk on tech transformation
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                GitCon · University of Toronto
+              </p>
+            </div>
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </section>
   );
 }
