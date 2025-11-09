@@ -4,10 +4,11 @@ import article from "../assets/article.jpg";
 import linkedin from "../assets/linkedin.png";
 import tiktok from "../assets/tiktok.jpg";
 import github from "../assets/github.png";
+import ewo from "../assets/ewo.jpg";
 
 export default function Home() {
   return (
-    <section className="mt-10 flex flex-col items-center">
+    <section className="mt-30 flex flex-col items-center">
       {/* 🌟 Intro Section with Profile Picture */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
         {/* Profile Picture */}
@@ -109,30 +110,6 @@ export default function Home() {
             </div>
           </a>
 
-          {/* 2️⃣ Shopify Feature */}
-          <a
-            href="https://www.shopify.com/blog"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
-          >
-            <div className="w-full h-64 relative">
-              <Image
-                src="/shopify-feature.jpg"
-                alt="Gira Chawda mentioned in Shopify Blog"
-                fill
-                className="object-cover"
-                style={{ objectPosition: "50% 20%" }}
-              />
-            </div>
-            <div className="bg-background p-4 text-left">
-              <h3 className="text-lg font-semibold">
-                Building for scale: My journey as a Shopify intern
-              </h3>
-              <p className="text-sm text-muted-foreground mt-1">Shopify Blog</p>
-            </div>
-          </a>
-
           {/* 3️⃣ Speaking Feature */}
           <a
             href="https://example.com/talk"
@@ -156,6 +133,31 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mt-1">
                 GitCon · University of Toronto
               </p>
+            </div>
+          </a>
+
+          {/* 3️⃣ EWO Feature */}
+          <a
+            href="https://ewo.ca/awards/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
+          >
+            <div className="w-full h-64 relative">
+              <Image
+                src={ewo}
+                alt="Gira Chawda winning Student of the Year Ontario"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "50% 20%" }}
+              />
+            </div>
+            <div className="bg-background p-4 text-left">
+              <h3 className="text-lg font-semibold">
+                Gira Chawda: 2024 Ontario Work-Integrated Learning Student of
+                the Year
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">EWO</p>
             </div>
           </a>
         </div>
