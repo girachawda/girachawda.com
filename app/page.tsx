@@ -6,6 +6,7 @@ import tiktok from "../assets/tiktok.jpg";
 import github from "../assets/github.png";
 import ewo from "../assets/ewo.jpg";
 import interview from "../assets/interview.png";
+import Project from "../components/Project";
 
 export default function Home() {
   return (
@@ -129,7 +130,8 @@ export default function Home() {
             </div>
             <div className="bg-background p-4 text-left">
               <h3 className="text-lg font-semibold">
-                The Power of Work-Integrated Learning: A Conversation with Dean Jane Goodyear
+                The Power of Work-Integrated Learning: A Conversation with Dean
+                Jane Goodyear
               </h3>
               <p className="text-sm text-muted-foreground mt-1">
                 Youtube · York University x City of Markham
@@ -163,6 +165,7 @@ export default function Home() {
           </a>
         </div>
       </div>
+      < Project />
     </section>
   );
 }
