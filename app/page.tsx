@@ -5,10 +5,11 @@ import linkedin from "../assets/linkedin.png";
 import tiktok from "../assets/tiktok.jpg";
 import github from "../assets/github.png";
 import ewo from "../assets/ewo.jpg";
+import interview from "../assets/interview.png";
 
 export default function Home() {
   return (
-    <section className="mt-30 flex flex-col items-center">
+    <section className="mt-20 flex flex-col items-center">
       {/* 🌟 Intro Section with Profile Picture */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
         {/* Profile Picture */}
@@ -112,15 +113,15 @@ export default function Home() {
 
           {/* 3️⃣ Speaking Feature */}
           <a
-            href="https://example.com/talk"
+            href="https://youtu.be/R3H6mXRdWzQ?list=LL&t=63"
             target="_blank"
             rel="noopener noreferrer"
             className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
           >
             <div className="w-full h-64 relative">
               <Image
-                src="/speaking-feature.jpg"
-                alt="Gira Chawda speaking at a tech event"
+                src={interview}
+                alt="Gira Chawda speaking about Work Integrated Learning with Dean Jane Goodyear"
                 fill
                 className="object-cover"
                 style={{ objectPosition: "50% 20%" }}
@@ -128,10 +129,10 @@ export default function Home() {
             </div>
             <div className="bg-background p-4 text-left">
               <h3 className="text-lg font-semibold">
-                Inspiring innovation: My talk on tech transformation
+                The Power of Work-Integrated Learning: A Conversation with Dean Jane Goodyear
               </h3>
               <p className="text-sm text-muted-foreground mt-1">
-                GitCon · University of Toronto
+                Youtube · York University x City of Markham
               </p>
             </div>
           </a>

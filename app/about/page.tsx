@@ -2,6 +2,11 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image"; 
+import { StaticImageData } from "next/image";
+import zoomcall from "../../assets/zoomcall.png";
+import bfcm from "../../assets/bfcm.jpeg";
+import shopify from "../../assets/shopify.png";
 
 type Milestone = {
   title: string;
@@ -9,6 +14,7 @@ type Milestone = {
   description: string;
   achievements: string[];
   links?: { label: string; href: string }[];
+  image?: StaticImageData;
 };
 
 const milestones: Milestone[] = [
@@ -44,6 +50,7 @@ const milestones: Milestone[] = [
         href: "https://www.instagram.com/p/CNgGJClgVKG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       },
     ],
+    image: zoomcall,
   },
   {
     title: "Community Leadership",
@@ -68,112 +75,160 @@ const milestones: Milestone[] = [
       "Enhanced merchant-facing Catalogs components for accessibility",
       "Contributed to backend functionality for Plus Trial and Plus features",
       "Worked across multiple R&D teams, adapting to frontend and backend challenges",
-      "Engaged in pair programming and team retrospectives to foster collaboration"
+      "Engaged in pair programming and team retrospectives to foster collaboration",
     ],
     links: [
-      { label: "2024 Shopify Highlights", href: "https://www.linkedin.com/posts/girachawda_2024-career-wrapped-2024-was-such-a-crazy-activity-7282100876649893888-buwN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIULO8BhVfJzapEIjL3bBJn5aIGpIyLv4Q" },
-      { label: "Vlog for York University", href: "https://www.instagram.com/reel/DDhdNm7RCkX/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA%3D%3D" }
+      {
+        label: "2024 Shopify Highlights",
+        href: "https://www.linkedin.com/posts/girachawda_2024-career-wrapped-2024-was-such-a-crazy-activity-7282100876649893888-buwN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIULO8BhVfJzapEIjL3bBJn5aIGpIyLv4Q",
+      },
+      {
+        label: "Vlog for York University",
+        href: "https://www.instagram.com/reel/DDhdNm7RCkX/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA%3D%3D",
+      },
     ],
-  },  
+    image: bfcm,
+  },
+  {
+    title: "Social Media Impact",
+    subtitle: "Continuing the Journey",
+    description:
+      "Throughout my coding journey, I’ve shared my growth and experiences across platforms, building a community that values authenticity and learning. I create relatable intern content, share the lessons I’ve learned, and highlight female representation in tech. My goal is to be real and transparent—showing both the challenges and successes to help demystify the tech world.",
+    achievements: [
+      "Grown a community of 2,000+ followers across TikTok and Instagram",
+      "Built an authentic online presence as a developer and content creator",
+      "Empowered others through transparent and relatable tech content",
+      "Advocated for female representation and inclusivity in tech",
+    ],
+    links: [
+      {
+        label: "Represent Women in Tech",
+        href: "https://www.tiktok.com/@giraintech/video/7527008355315977528",
+      },
+      {
+        label: "Code with me",
+        href: "https://www.tiktok.com/@giraintech/video/7532953660217625861",
+      },
+    ],
+    image: shopify,
+  }  
 ];
 
-const contentGallery = [
-  {
-    title: "Coding Workshop Highlights",
-    thumbnail: "/images/workshop-thumbnail.jpg", // local image or URL
-    href: "https://youtu.be/DNo3uW5USts",
-  },
-  {
-    title: "Shopify Vlog for York University",
-    thumbnail: "/images/york-vlog.jpg",
-    href: "https://www.instagram.com/reel/DDhdNm7RCkX/?utm_source=ig_web_button_share_sheet",
-  },
-  {
-    title: "Workshop Promo Reel",
-    thumbnail: "/images/workshop-promo.jpg",
-    href: "https://www.instagram.com/p/CNgGJClgVKG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-  },
-];
-
+// const contentGallery = [
+//   {
+//     title: "Coding Workshop Highlights",
+//     thumbnail: "/images/workshop-thumbnail.jpg",
+//     href: "https://youtu.be/DNo3uW5USts",
+//   },
+//   {
+//     title: "Shopify Vlog for York University",
+//     thumbnail: "/hello",
+//     href: "https://www.instagram.com/reel/DDhdNm7RCkX/?utm_source=ig_web_button_share_sheet",
+//   },
+//   {
+//     title: "Workshop Promo Reel",
+//     thumbnail: "https://i.ytimg.com/vi/ZlxWCJH5iD0/maxresdefault.jpg",
+//     href: "https://www.youtube.com/watch?v=ZlxWCJH5iD0&t=188s",
+//   },
+// ];
 
 export default function AboutPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <><div className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl font-bold mb-4">My Story Constellation</h1>
-      <p className="text-lg text-muted-foreground mb-12">
-        A resume lists what I’ve done, but not <em>how</em> I got there. Each
-        accomplishment has a story; late nights learning, first teaching
-        moments, teamwork, and experiences that shaped me. This constellation
-        lets you explore the journey behind each milestone, not just the
-        outcome.
-      </p>
+    <>
+      <div className="max-w-4xl mx-auto px-6 py-20">
+        <h1 className="text-4xl font-bold mb-4">My Story Constellation</h1>
+        <p className="text-lg text-muted-foreground mb-12">
+          A resume lists what I’ve done, but not <em>how</em> I got there. Each
+          accomplishment has a story; late nights learning, first teaching
+          moments, teamwork, and experiences that shaped me. This constellation
+          lets you explore the journey behind each milestone, not just the
+          outcome.
+        </p>
 
-      {/* Timeline */}
-      <div className="relative flex flex-col gap-12">
-        <div className="absolute left-4 top-0 bottom-0 w-1 bg-border/40 rounded-full" />
+        {/* Timeline */}
+        <div className="relative flex flex-col gap-12">
+          <div className="absolute left-4 top-0 bottom-0 w-1 bg-border/40 rounded-full" />
 
-        {milestones.map((m, index) => (
-          <div
-            key={index}
-            className="relative pl-12"
-            onMouseEnter={() => setActiveIndex(index)}
-            onMouseLeave={() => setActiveIndex(null)}
-            onClick={() => setActiveIndex(index === activeIndex ? null : index)}
-          >
-            {/* Timeline dot */}
+          {milestones.map((m, index) => (
             <div
-              className={`absolute left-0 top-1 w-6 h-6 rounded-full transition-all 
-                ${activeIndex === index
-                  ? "bg-primary shadow-lg scale-110"
-                  : "bg-primary/60 group-hover:bg-primary/80"}
-            `} />
-            {/* Title + subtitle */}
-            <h2 className="text-xl font-semibold cursor-pointer">{m.title}</h2>
-            <p className="text-sm text-muted-foreground cursor-pointer">
-              {m.subtitle}
-            </p>
+              key={index}
+              className="relative pl-12"
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+              onClick={() =>
+                setActiveIndex(index === activeIndex ? null : index)
+              }
+            >
+              {/* Timeline dot */}
+              <div
+                className={`absolute left-0 top-1 w-6 h-6 rounded-full transition-all 
+                ${
+                  activeIndex === index
+                    ? "bg-primary shadow-lg scale-110"
+                    : "bg-primary/60 group-hover:bg-primary/80"
+                }
+            `}
+              />
+              {/* Title + subtitle */}
+              <h2 className="text-xl font-semibold cursor-pointer">
+                {m.title}
+              </h2>
+              <p className="text-sm text-muted-foreground cursor-pointer">
+                {m.subtitle}
+              </p>
 
-            {/* Expanded Card */}
-            <AnimatePresence>
-              {activeIndex === index && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
-                  transition={{ duration: 0.2 }}
-                  className="mt-4 p-6 rounded-xl border bg-card shadow-sm"
-                >
-                  <p className="text-muted-foreground">{m.description}</p>
+              {/* Expanded Card */}
+              <AnimatePresence>
+                {activeIndex === index && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -8 }}
+                    transition={{ duration: 0.2 }}
+                    className="mt-4 p-6 rounded-xl border bg-card shadow-sm"
+                  >
+                    {m.image && (
+                      <div className="relative w-full h-96 mb-4">
+                        <Image
+                          src={m.image}
+                          alt={m.title}
+                          fill
+                          className="object-cover rounded-lg"
+                        />
+                      </div>
+                    )}
+                    <p className="text-muted-foreground">{m.description}</p>
 
-                  <ul className="mt-4 list-disc list-inside space-y-1 text-sm">
-                    {m.achievements.map((a, i) => (
-                      <li key={i}>{a}</li>
-                    ))}
-                  </ul>
-
-                  {m.links && (
-                    <div className="mt-4 flex gap-4">
-                      {m.links.map((link, i) => (
-                        <a
-                          key={i}
-                          href={link.href}
-                          target="_blank"
-                          className="text-primary underline text-sm"
-                        >
-                          {link.label}
-                        </a>
+                    <ul className="mt-4 list-disc list-inside space-y-1 text-sm">
+                      {m.achievements.map((a, i) => (
+                        <li key={i}>{a}</li>
                       ))}
-                    </div>
-                  )}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
+                    </ul>
+
+                    {m.links && (
+                      <div className="mt-4 flex gap-4">
+                        {m.links.map((link, i) => (
+                          <a
+                            key={i}
+                            href={link.href}
+                            target="_blank"
+                            className="text-primary underline text-sm"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
       </div>
-    </div><div className="mt-20">
+      {/* <div className="mt-20">
         <h1 className="text-4xl font-bold mb-4">Content Gallery</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {contentGallery.map((item, i) => (
@@ -186,14 +241,17 @@ export default function AboutPage() {
               <img
                 src={item.thumbnail}
                 alt={item.title}
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform" />
+                className="w-full h-64 object-cover group-hover:scale-105 transition-transform"
+              />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <p className="text-white font-semibold text-center px-2">{item.title}</p>
+                <p className="text-white font-semibold text-center px-2">
+                  {item.title}
+                </p>
               </div>
             </a>
           ))}
-        </div>
-      </div></>
-  
+        </div> */}
+      {/* </div> */}
+    </>
   );
 }
