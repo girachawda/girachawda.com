@@ -145,7 +145,7 @@ export default function Project() {
         title="Climbing the Intern Corporate Ladder (Video Series)"
       >
         <p className="text-sm text-muted-foreground">
-          In this series, I share valuable tips I've learned from my journey as an intern. 
+          In this series, I share valuable tips I&apos;ve learned from my journey as an intern. 
         </p>
         <ul className="mt-4 list-disc pl-5 space-y-2 text-sm leading-relaxed text-left">
           <li>Help others increase their visibility</li>
