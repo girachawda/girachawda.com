@@ -5,7 +5,6 @@ import { useState } from "react";
 import Modal from "./Modal";
 import crackingthecode from "../assets/crackingthecode.png";
 import mixify from "../assets/mixify.png";
-import { mix } from "framer-motion";
 import climbing from "../assets/climbing.png";
 
 export default function Project() {
