@@ -114,24 +114,6 @@ const milestones: Milestone[] = [
   }  
 ];
 
-// const contentGallery = [
-//   {
-//     title: "Coding Workshop Highlights",
-//     thumbnail: "/images/workshop-thumbnail.jpg",
-//     href: "https://youtu.be/DNo3uW5USts",
-//   },
-//   {
-//     title: "Shopify Vlog for York University",
-//     thumbnail: "/hello",
-//     href: "https://www.instagram.com/reel/DDhdNm7RCkX/?utm_source=ig_web_button_share_sheet",
-//   },
-//   {
-//     title: "Workshop Promo Reel",
-//     thumbnail: "https://i.ytimg.com/vi/ZlxWCJH5iD0/maxresdefault.jpg",
-//     href: "https://www.youtube.com/watch?v=ZlxWCJH5iD0&t=188s",
-//   },
-// ];
-
 export default function AboutPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -228,30 +210,6 @@ export default function AboutPage() {
           ))}
         </div>
       </div>
-      {/* <div className="mt-20">
-        <h1 className="text-4xl font-bold mb-4">Content Gallery</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {contentGallery.map((item, i) => (
-            <a
-              key={i}
-              href={item.href}
-              target="_blank"
-              className="group relative block overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition"
-            >
-              <img
-                src={item.thumbnail}
-                alt={item.title}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <p className="text-white font-semibold text-center px-2">
-                  {item.title}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div> */}
-      {/* </div> */}
     </>
   );
 }
