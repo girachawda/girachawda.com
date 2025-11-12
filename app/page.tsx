@@ -10,7 +10,7 @@ import Project from "../components/Project";
 
 export default function Home() {
   return (
-    <section className="mt-20 flex flex-col items-center">
+    <section className="mt-18 flex flex-col items-center">
       {/* 🌟 Intro Section with Profile Picture */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
         {/* Profile Picture */}
@@ -71,17 +71,17 @@ export default function Home() {
             >
               Learn More
             </a>
-            <a
+            {/* <a
               href="/insights"
               className="px-5 py-2 border border-border rounded-md hover:bg-muted transition"
             >
-              See My Insights
-            </a>
+              See My Insights */}
+            {/* </a> */}
           </div>
         </div>
       </div>
 
-      {/* 🌟 Featured Section */}
+      {/* Featured Section */}
       <div className="mt-20 text-center">
         <h2 className="text-2xl font-semibold mb-6">Highlights ✨</h2>
 
@@ -112,7 +112,7 @@ export default function Home() {
             </div>
           </a>
 
-          {/* 3️⃣ Speaking Feature */}
+          {/* Speaking Feature */}
           <a
             href="https://youtu.be/R3H6mXRdWzQ?list=LL&t=63"
             target="_blank"

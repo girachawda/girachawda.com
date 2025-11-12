@@ -6,6 +6,7 @@ import Modal from "./Modal";
 import crackingthecode from "../assets/crackingthecode.png";
 import mixify from "../assets/mixify.png";
 import { mix } from "framer-motion";
+import climbing from "../assets/climbing.png";
 
 export default function Project() {
   const [openCracking, setOpenCracking] = useState(false);
@@ -22,7 +23,7 @@ export default function Project() {
           onClick={() => setOpenCracking(true)}
           className="block w-full rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card text-left"
         >
-          <div className="w-full h-64 relative">
+          <div className="w-full h-68 relative">
             <Image
               src={crackingthecode}
               alt="Cracking the Code project cover"
@@ -45,7 +46,7 @@ export default function Project() {
           onClick={() => setOpenMixify(true)}
           className="block w-full rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card text-left"
         >
-          <div className="w-full h-64 relative">
+          <div className="w-full h-68 relative">
             <Image
               src={mixify}
               alt="Mixify project preview"
@@ -63,14 +64,14 @@ export default function Project() {
           </div>
         </button>
 
-      {/* New Project Item */}
+      {/* CTICL */}
       <button
         onClick={() => setOpenNewProject(true)}
         className="block w-full rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card text-left"
       >
-        <div className="w-full h-64 relative">
+        <div className="w-full h-68 relative">
           <Image
-            src={mixify}
+            src={climbing}
             alt="New Project cover"
             fill
             className="object-cover"
@@ -79,9 +80,9 @@ export default function Project() {
           />
         </div>
         <div className="bg-background p-4">
-          <h3 className="text-lg font-semibold">New Project Title</h3>
+          <h3 className="text-lg font-semibold">Climbing the Intern Corporate Ladder</h3>
           <p className="text-sm text-muted-foreground mt-1">
-            New Project Description
+            Tiktok Series
           </p>
         </div>
       </button>
@@ -138,18 +139,22 @@ export default function Project() {
         </a>
       </Modal>
 
-      {/* New Project Modal */}
+      {/* CTICL */}
       <Modal
         open={openNewProject}
         onClose={() => setOpenNewProject(false)}
-        title="New Project Title"
+        title="Climbing the Intern Corporate Ladder (Video Series)"
       >
-        <p className="text-sm text-muted-foreground">New Project Description</p>
+        <p className="text-sm text-muted-foreground">
+          In this series, I share valuable tips I've learned from my journey as an intern. 
+        </p>
         <ul className="mt-4 list-disc pl-5 space-y-2 text-sm leading-relaxed text-left">
-          {/* Add project details here */}
+          <li>Help others increase their visibility</li>
+          <li>Share tips about being active learners</li>
+          <li>Explore strategies to navigate the corporate landscape effectively</li>
         </ul>
         <a
-          href="/* Add your project link here */"
+          href="https://www.tiktok.com/@giraintech/collection/CTICL%20%F0%9F%AA%9C%E2%9C%A8-7513937692746091270"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center justify-center rounded-lg border border-border px-3 py-2 text-sm font-medium hover:bg-muted"
