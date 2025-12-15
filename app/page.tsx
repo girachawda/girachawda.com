@@ -4,13 +4,13 @@ import article from "../assets/article.jpg";
 import linkedin from "../assets/linkedin.png";
 import tiktok from "../assets/tiktok.jpg";
 import github from "../assets/github.png";
-import ewo from "../assets/ewo.jpg";
+import intern_interview from "../assets/intern_interview.jpg";
 import interview from "../assets/interview.png";
 import Project from "../components/Project";
 
 export default function Home() {
   return (
-    <section className="mt-18 flex flex-col items-center">
+    <section className="mt-6 flex flex-col items-center">
       {/* 🌟 Intro Section with Profile Picture */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
         {/* Profile Picture */}
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       {/* Featured Section */}
-      <div className="mt-20 text-center">
+      <div className="mt-8 text-center">
         <h2 className="text-2xl font-semibold mb-6">Highlights ✨</h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
@@ -108,6 +108,32 @@ export default function Home() {
               </h3>
               <p className="text-sm text-muted-foreground mt-1">
                 YFile · York University
+              </p>
+            </div>
+          </a>
+          {/* Intern Interview Feature */}
+          <a
+            href="https://www.linkedin.com/posts/girachawda_i-really-didnt-think-coding-was-for-me-activity-7402440584835276800-KZI1?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIULO8BhVfJzapEIjL3bBJn5aIGpIyLv4Q"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
+          >
+            <div className="w-full h-64 relative">
+              <Image
+                src={intern_interview}
+                alt="Gira Chawda winning Student of the Year Ontario"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "50% 20%" }}
+              />
+            </div>
+            <div className="bg-background p-4 text-left">
+              <h3 className="text-lg font-semibold">
+                Gira Chawda: Intern Spotlight @ Shopify | &quot;I really
+                didn&apos;t think coding was for me&quot;
+              </h3>
+              <p className="text-sm text-muted-foreground mt-1">
+                Shopify · Julia Fedorin
               </p>
             </div>
           </a>
@@ -138,34 +164,9 @@ export default function Home() {
               </p>
             </div>
           </a>
-
-          {/* 3️⃣ EWO Feature */}
-          <a
-            href="https://ewo.ca/awards/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-xl overflow-hidden border border-border hover:shadow-lg hover:scale-[1.02] transition-transform bg-card"
-          >
-            <div className="w-full h-64 relative">
-              <Image
-                src={ewo}
-                alt="Gira Chawda winning Student of the Year Ontario"
-                fill
-                className="object-cover"
-                style={{ objectPosition: "50% 20%" }}
-              />
-            </div>
-            <div className="bg-background p-4 text-left">
-              <h3 className="text-lg font-semibold">
-                Gira Chawda: 2024 Ontario Work-Integrated Learning Student of
-                the Year
-              </h3>
-              <p className="text-sm text-muted-foreground mt-1">EWO</p>
-            </div>
-          </a>
         </div>
       </div>
-      < Project />
+      <Project />
     </section>
   );
 }
