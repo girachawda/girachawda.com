@@ -10,7 +10,7 @@ import Project from "../components/Project";
 
 export default function Home() {
   return (
-    <section className="mt-18 flex flex-col items-center">
+    <section className="mt-6 flex flex-col items-center">
       {/* 🌟 Intro Section with Profile Picture */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8">
         {/* Profile Picture */}
@@ -82,7 +82,7 @@ export default function Home() {
       </div>
 
       {/* Featured Section */}
-      <div className="mt-20 text-center">
+      <div className="mt-8 text-center">
         <h2 className="text-2xl font-semibold mb-6">Highlights ✨</h2>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center">
