@@ -129,8 +129,8 @@ export default function Home() {
             </div>
             <div className="bg-background p-4 text-left">
               <h3 className="text-lg font-semibold">
-                Gira Chawda: Intern Spotlight @ Shopify | "I really didn't think
-                coding was for me"
+                Gira Chawda: Intern Spotlight @ Shopify | &quot;I really
+                didn&apos;t think coding was for me&quot;
               </h3>
               <p className="text-sm text-muted-foreground mt-1">
                 Shopify · Julia Fedorin
