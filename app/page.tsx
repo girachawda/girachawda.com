@@ -11,6 +11,7 @@ import interview from "../assets/interview.png";
 import Project from "../components/Project";
 import Carousel from "@/components/Carousel";
 import FadeIn from "@/components/FadeIn";
+import instagram from "../assets/instagram.png";
 
 export default function Home() {
   return (
@@ -55,6 +56,14 @@ export default function Home() {
                 className="hover:opacity-80 transition hover:shadow-lg hover:scale-[1.1]"
               >
                 <Image src={tiktok} alt="TikTok" width={28} height={28} />
+              </a>
+              <a 
+                href="https://www.instagram.com/giraintech"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition hover:shadow-lg hover:scale-[1.1]"
+              >
+                <Image src={instagram} alt="Instagram" width={28} height={28} />
               </a>
             </div>
           </div>
