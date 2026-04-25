@@ -14,6 +14,8 @@ import crackingthecode from "../../assets/crackingthecode.png";
 import gem from "../../assets/gem-speech.jpg";
 import railsworld from "../../assets/railsworld.png";
 import speaking from "../../assets/speaking.png";
+import tiff from "../../assets/tiff.png";
+import tobi from "../../assets/tobi.jpg";
 
 type Milestone = {
   title: string;
@@ -137,6 +139,14 @@ export default function AboutPage() {
             <Polaroid
               image={gem}
               caption="Speech about mentorship at GEM donor event"
+              rotation={-2}
+              delay={0.2}
+            />
+          </div>
+          <div className="mt-32">
+            <Polaroid
+              image={tiff}
+              caption="Cracking the Code Workshop ft Tiffany Janzen (@tiffintech)"
               rotation={-2}
               delay={0.2}
             />
@@ -271,8 +281,8 @@ export default function AboutPage() {
           </div>
           <div className="mt-32">
             <Polaroid
-              image={speaking}
-              caption="Hosting the lightning talks at the Shopify office"
+              image={tobi}
+              caption="Getting recognized at a Lunch with the CEO for my impactful work"
               rotation={1}
               delay={0.5}
             />
