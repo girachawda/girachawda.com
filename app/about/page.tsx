@@ -135,7 +135,7 @@ export default function AboutPage() {
               delay={0}
             />
           </div>
-          <div className="mt-32">
+          <div className="mt-80">
             <Polaroid
               image={gem}
               caption="Speech about mentorship at GEM donor event"
@@ -143,7 +143,7 @@ export default function AboutPage() {
               delay={0.2}
             />
           </div>
-          <div className="mt-32">
+          <div className="mt-80">
             <Polaroid
               image={tiff}
               caption="Cracking the Code Workshop ft Tiffany Janzen (@tiffintech)"
@@ -151,7 +151,7 @@ export default function AboutPage() {
               delay={0.2}
             />
           </div>
-          <div className="mt-20">
+          <div className="mt-80">
             <Polaroid
               image={wit}
               caption="Because representation matters 💜"
@@ -271,7 +271,7 @@ export default function AboutPage() {
               delay={0.1}
             />
           </div>
-          <div className="mt-24">
+          <div className="mt-80">
             <Polaroid
               image={railsworld}
               caption="Creating content for @ShopifyEng on X at Rails World"
@@ -279,7 +279,7 @@ export default function AboutPage() {
               delay={0.3}
             />
           </div>
-          <div className="mt-32">
+          <div className="mt-80">
             <Polaroid
               image={tobi}
               caption="Getting recognized at a Lunch with the CEO for my impactful work"

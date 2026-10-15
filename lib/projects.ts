@@ -3,6 +3,7 @@ import snapchatmems from "../assets/snapchatmems.png";
 import crackingthecode from "../assets/crackingthecode.png";
 import mixify from "../assets/mixify.png";
 import climbing from "../assets/climbing.png";
+import ontheotherside from "../assets/ontheotherside.png";
 
 export interface Project {
   slug: string;
@@ -20,6 +21,25 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "on-the-other-side",
+    title: "On the Other Side",
+    subtitle: "An online wall for DV survivors. Built by survivors, for survivors.",
+    description:
+      "An anonymous online space where survivors of domestic violence share their visions of peace and moments of hope. No accounts, no tracking. Just a place to breathe and be seen.",
+    bullets: [
+      "Built by survivors, for survivors, with safety and anonymity at the core",
+      "Fully anonymous with no tracking or accounts required",
+      "Partnered with the Assaulted Women's Helpline for crisis support integration",
+      "Designed to foster community and hope in a safe, judgment-free space",
+    ],
+    link: "https://ontheotherside.app",
+    linkText: "Visit ontheotherside.app",
+    image: ontheotherside,
+    imageAlt: "On the Other Side — an online wall for DV survivors",
+    tags: ["Social Impact", "Full-Stack", "Accessibility"],
+    year: "2026",
+  },
   {
     slug: "cracking-the-code",
     title: "Cracking the Code",
